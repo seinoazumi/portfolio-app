@@ -1,12 +1,11 @@
-.header__nav
-  %nav.header__nav--l
-    %ul.social-link
-      %li.social-link__icon=fa_icon("facebook-f")
-      %li.social-link__icon=fa_icon("twitter")
-  
-  %nav.header__nav--r
-    %ul.page-nav
-      %li.page-nav__list About
-      %li.page-nav__list Works
-      %li.page-nav__list Blog
-      %li.page-nav__list Contact
+%nav.header__nav--l.col.navbar
+  %ul.social-link.d-flex.justify-content-between
+    %li.social-link__icon=fa_icon("facebook-f")
+    %li.social-link__icon=fa_icon("twitter")
+
+%nav.header__nav--r.col.navbar
+  %ul.page-nav.d-flex.justify-content-between
+    %li=link_to 'Home', '#', class: 'page-nav__list'
+    %li=link_to 'About', '#', class: 'page-nav__list'
+    %li=link_to 'Works', '#', class: 'page-nav__list'
+    %li=link_to 'Blog', '#', class: 'page-nav__list'
