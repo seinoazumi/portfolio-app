@@ -3,5 +3,7 @@ class InformationsController < ApplicationController
   end
 
   def about
+    d = Date.today
+    @year = d.year
   end
 end
