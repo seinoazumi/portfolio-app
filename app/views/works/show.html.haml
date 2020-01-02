@@ -1,0 +1,11 @@
+%main.work.row
+  %figure.work__l.overflow-scroll
+    = image_tag @work.image, class: 'work__img'
+  
+  .work__info
+    %h3.work__info__title= @work.name
+    %p.work__info__category= @work.category
+    %p.work__info__softwear= @work.softwear
+    %p.work__info__time= @work.time
+    %p.work__info__description= @work.description
+    %p.work__info__date= @work.date
