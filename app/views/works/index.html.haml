@@ -1,5 +1,4 @@
 %main.works-page.row
-  .works.col
+  .works
     - @works.each do |work|
-      %p= work.name
-      %p= work.image
+      = image_tag work.image , class: 'col col-sm-4', alt: "#{work.name}"
