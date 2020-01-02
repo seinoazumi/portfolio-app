@@ -2,10 +2,10 @@
   .page-top.d-sm-flex
     .left-info.col
       %figure
-        =image_tag "goldfish1.jpg", class: "keyvis", alt: "トップ画像", width: "300"
+        =image_tag "goldfish1.jpg", class: "keyvis w-100", alt: "トップ画像", width: "300"
     .right-info.col
       .right-info__inner
-        %h1.site-title Azumi's Portfolio
+        %h1.site-title.text-center Azumi's Portfolio
         %section.site-description
           %p 清野あずみのポートフォリオサイトです。
           %p 地域で頑張っている誰かや、生きづらさを抱える人を支える誰かを、デザインやプログラミングを通じて応援できればと思っています。
@@ -14,17 +14,17 @@
     %article.info
       %h2.info__header.text-center What I Can Do
       .info__content.d-sm-flex
-        %section.app.col-4
+        %section.app.col-sm-4.col
           %figure.app__img
             =image_tag "pc.jpg", alt: "プログラミングのイメージ", class: "img-fluid"
           .app__description
             %p Ruby on Rails, JavaScript, PHPなどを持ちいたWEBアプリケーションが製作できます。
-        %section.design.col-4
+        %section.design.col-sm-4.col
           %figure.design__img
             =image_tag "dtp.jpg", alt: "DTPのイメージ", class: "img-fluid"
           .design__description
             %p Photoshop, Illustratorなどを用いた紙媒体の製作物の製作実績をご紹介いたします。
-        %section.other.col-4
+        %section.other.col-sm-4.col
           %figure.other__img
             =image_tag "other.jpg", alt: "その他の作業のイメージ", class: "img-fluid"
           .other__description
