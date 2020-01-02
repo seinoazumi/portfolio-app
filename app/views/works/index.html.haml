@@ -1,3 +1,5 @@
 %main.works-page.row
   .works.col
-    %p works　一覧ページです
+    - @works.each do |work|
+      %p= work.name
+      %p= work.image
