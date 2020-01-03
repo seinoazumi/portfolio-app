@@ -20,6 +20,10 @@ class WorksController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
   private
 
   def work_params
