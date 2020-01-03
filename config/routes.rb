@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'informations#index'
   get '/about', to: 'informations#about'
 
-  resources :works, only: [:index, :show, :new, :create, :edit, :update]
+  resources :works, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 end
