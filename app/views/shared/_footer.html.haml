@@ -4,6 +4,10 @@
     %li=link_to 'About', '#', class: 'page-nav__list'
     %li=link_to 'Works', '#', class: 'page-nav__list'
     %li=link_to 'Blog', '#', class: 'page-nav__list'
+    -if current_user
+      %li=link_to 'Logout', destroy_user_session_path, method: :delete, class: 'page-nav__list'
+    - else
+      %li=link_to 'Admin Login', new_user_session_path, class: 'page-nav__list'
 %small.copy.col-12.text-center
   Copy Right &copy;
   %span= @year
