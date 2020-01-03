@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   get '/about', to: 'informations#about'
 
   resources :users
-  resources :works, only: [:index, :show, :new, :create, :edit, :update, :destroy]
-end
+
+  resources :works, only: [:index, :show] 
+    namespace :admin do
+      resources :works, only: [:index, :new, :create, :edit, :destroy]
+    end
+  end
