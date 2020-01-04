@@ -1,15 +1,19 @@
 %header.header.row.d-flex.justify-content-between
-  %nav.header__nav--l.col-2.social-link.d-flex.justify-content-between
-    =link_to "https://www.facebook.com/seinoazumi", class: 'social-link__icon', target: '_new' do
-      %span=fa_icon("facebook-f")
-    =link_to "https://twitter.com/azmengineer", class: 'social-link__icon', target: '_new' do
-      %span=fa_icon("twitter")
+  %nav.header__nav--l.navbar.col-2
+    .social-link.w-100.d-flex.justify-content-between
+      =link_to "https://www.facebook.com/seinoazumi", class: 'social-link__icon text-center pt-1 mr-3', target: '_new' do
+        %span=fa_icon("facebook-f")
+      =link_to "https://twitter.com/azmengineer", class: 'social-link__icon text-center pt-1', target: '_new' do
+        %span=fa_icon("twitter")
 
-  %nav.header__nav--r.col-md-6.navbar
-    %ul.page-nav.d-flex.justify-content-between
+  %nav.header__nav--r.col-md-6.navbar.d-none.d-md-block
+    %ul.page-nav.d-flex.justify-content-between.pt-3
       = render 'shared/page-nav'
 
   -# スマホ版のメニューを作るときに復活させる
-  %nav.header__nav--sp.d-none
-    %ul.page-nav
-      = render 'shared/page-nav'
+  %nav.header__nav--sp.d-md-none
+    .menu-btn.pt-4
+      = fa_icon("bars")
+    .sp-page-nav
+      %ul.sp-page-nav__block.text-center
+        = render 'shared/page-nav'

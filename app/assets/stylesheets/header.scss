@@ -1,0 +1,36 @@
+.social-link {
+  &__icon {
+    border: $border-gray;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    height: 50px;
+    min-width: 50px;
+  }
+}
+
+.menu-btn {
+  height: 50px;
+  min-width: 50px;
+  .fa-bars {
+    font-size: 1.6rem;
+  }
+}
+.sp-page-nav {
+  position: absolute;
+    right: 0;
+    top:80px;
+  width: 100vw;
+  z-index: 1;
+  &__block {
+    background: $white;
+    border-top: $border-gray-light;
+    padding-left: 0;
+    .page-nav__list {
+      display: block;
+      line-height: 40px;
+      padding-top: 5px;
+      text-align: canter;
+      border-bottom: $border-gray-light;
+    }
+  }
+}
