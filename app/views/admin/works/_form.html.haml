@@ -1,4 +1,4 @@
-= form_with model: @work, url: admin_works_path, local: true do |f|
+= form_with model: [ :admin, @work ], local: true do |f|
   %p
     = f.label :name, "作品名："
     = f.text_field :name

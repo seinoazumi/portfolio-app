@@ -1,4 +1,4 @@
 %main.works.row
   - @works.each do |work|
     = link_to work_path(work.id), class: 'col-4' do
-      = image_tag work.image.url, alt: "#{work.name}"
+      = image_tag work.image.url, alt: "#{work.name}", class: "image-fluid"

@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
   resources :works, only: [:index, :show] 
     namespace :admin do
-      resources :works, only: [:index, :new, :create, :edit, :destroy]
+      resources :works, only: [:new, :create, :edit, :update, :destroy]
     end
   end
