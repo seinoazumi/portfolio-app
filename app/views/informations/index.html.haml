@@ -1,62 +1,62 @@
-.index-page
-  .page-top.d-sm-flex
-    .left-info.col
-      %figure.text-center
-        =image_tag "goldfish1.jpg", class: "keyvis", alt: "トップ画像", width: "300"
-    .right-info.col
-      .right-info__inner
-        %h1.site-title.text-center Azumi's Portfolio
-        %section.site-description
-          %p 清野あずみのポートフォリオサイトです。
-          %p 地域で頑張っている誰かや、生きづらさを抱える人を支える誰かを、デザインやプログラミングを通じて応援できればと思っています。
 
-  %main.col
-    %article.info
-      %h2.info__header.text-center What I Can Do
-      .info__content.d-sm-flex
-        %section.app.col-sm-4.col
-          %figure.app__img
-            =image_tag "pc.jpg", alt: "プログラミングのイメージ", class: "img-fluid"
-          .app__description
-            %p Ruby on Rails, JavaScript, PHPなどを持ちいたWEBアプリケーションが製作できます。
-        %section.design.col-sm-4.col
-          %figure.design__img
-            =image_tag "dtp.jpg", alt: "DTPのイメージ", class: "img-fluid"
-          .design__description
-            %p Photoshop, Illustratorなどを用いた紙媒体の製作物の製作実績をご紹介いたします。
-        %section.other.col-sm-4.col
-          %figure.other__img
-            =image_tag "other.jpg", alt: "その他の作業のイメージ", class: "img-fluid"
-          .other__description
-            %p 動画コンテンツ・IT講習テキスト・講演実績などその他の実績をご紹介いたします。
+.page-top.d-sm-flex
+  .left-info.col
+    %figure.text-center
+      =image_tag "goldfish1.jpg", class: "keyvis", alt: "トップ画像", width: "300"
+  .right-info.col
+    .right-info__inner
+      %h1.site-title.text-center Azumi's Portfolio
+      %section.site-description
+        %p 清野あずみのポートフォリオサイトです。
+        %p 地域で頑張っている誰かや、生きづらさを抱える人を支える誰かを、デザインやプログラミングを通じて応援できればと思っています。
 
-    %article.works.col
-      %h2.works__header.text-center Works
-      .works__content
-        .slider.d-flex
-          =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
-          =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
-          =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
-          =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
+%main.col.mt-5
+  %article.info
+    %h2.info__header.mb-3.text-center What I Can Do
+    .info__content.d-sm-flex
+      %section.app.col-sm-4.col
+        %figure.app__img
+          =image_tag "pc.jpg", alt: "プログラミングのイメージ", class: "img-fluid"
+        .app__description
+          %p Ruby on Rails, JavaScript, PHPなどを持ちいたWEBアプリケーションが製作できます。
+      %section.design.col-sm-4.col
+        %figure.design__img
+          =image_tag "dtp.jpg", alt: "DTPのイメージ", class: "img-fluid"
+        .design__description
+          %p Photoshop, Illustratorなどを用いた紙媒体の製作物の製作実績をご紹介いたします。
+      %section.other.col-sm-4.col
+        %figure.other__img
+          =image_tag "other.jpg", alt: "その他の作業のイメージ", class: "img-fluid"
+        .other__description
+          %p 動画コンテンツ・IT講習テキスト・講演実績などその他の実績をご紹介いたします。
 
-        .bottom-info.text-right
-          %p See More
-    %article.blog.col
-      %h2.blog__header.text-center Blog and Info.
-      .blog__content.d-flex
-        .media.col.d-block.d-md-flex
-          %figure.media__img.mr-2
-            =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
-          %p.media__description はてなブログでは日々の学習の気づきを書いています
-        .media.col.d-block.d-md-flex
-          %figure.media__img.mr-2
-            =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
-          %p.media__descriprion Wantedlyには転職活動に関する情報を記載しています
+  %article.works.col
+    %h2.works__header.mb-3.text-center Works
+    .works__content
+      .slider.d-flex
+        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
+        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
+        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
+        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
 
-    %article.contact.col
-      %h2.contact__header.text-center Contact Me
-      .contact__form
-        %p Your Name*
-        %p Subject*
-        %p Your Email*
-        %p.submit Submit
+      .bottom-info.text-right
+        %p See More
+  %article.blog.col
+    %h2.blog__header.mb-3.text-center Blog and Info.
+    .blog__content.d-flex
+      .media.col.d-block.d-md-flex
+        %figure.media__img.mr-2
+          =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
+        %p.media__description はてなブログでは日々の学習の気づきを書いています
+      .media.col.d-block.d-md-flex
+        %figure.media__img.mr-2
+          =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
+        %p.media__descriprion Wantedlyには転職活動に関する情報を記載しています
+
+  %article.contact.col
+    %h2.contact__header.mb-3.text-center Contact Me
+    .contact__form
+      %p Your Name*
+      %p Subject*
+      %p Your Email*
+      %p.submit Submit

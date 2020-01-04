@@ -1,11 +1,20 @@
-%nav.header__nav--l.col.navbar
-  %ul.social-link.d-flex.justify-content-between
-    %li.social-link__icon=fa_icon("facebook-f")
-    %li.social-link__icon=fa_icon("twitter")
+%header.header.row.d-flex.justify-content-between
+  %nav.header__nav--l.col-3.navbar
+    %ul.social-link.d-flex.justify-content-between
+      %li.social-link__icon.col=fa_icon("facebook-f")
+      %li.social-link__icon.col=fa_icon("twitter")
 
-%nav.header__nav--r.col.navbar
-  %ul.page-nav.d-flex.justify-content-between
-    %li=link_to 'Home', '#', class: 'page-nav__list'
-    %li=link_to 'About', '#', class: 'page-nav__list'
-    %li=link_to 'Works', '#', class: 'page-nav__list'
-    %li=link_to 'Blog', '#', class: 'page-nav__list'
+  %nav.header__nav--r.col-md-6.navbar
+    %ul.page-nav.d-flex.justify-content-between
+      %li=link_to 'Home', '#', class: 'page-nav__list col'
+      %li=link_to 'About', '#', class: 'page-nav__list col'
+      %li=link_to 'Works', '#', class: 'page-nav__list col'
+      %li=link_to 'Blog', '#', class: 'page-nav__list col'
+
+  -# スマホ版のメニューを作るときに復活させる
+  %nav.header__nav--sp.d-none
+    %ul.page-nav
+      %li=link_to 'Home', '#', class: 'page-nav__list col'
+      %li=link_to 'About', '#', class: 'page-nav__list col'
+      %li=link_to 'Works', '#', class: 'page-nav__list col'
+      %li=link_to 'Blog', '#', class: 'page-nav__list col'
