@@ -1,4 +1,3 @@
-
 .page-top.d-sm-flex
   .left-info.col
     %figure.text-center
@@ -34,26 +33,26 @@
     %h2.works__header.mb-3.text-center Works
     .works__content
       .slider.d-flex
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide"
+        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
+        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
+        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
+        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
 
       .bottom-info.text-right
         %p See More
   %article.blog.col
     %h2.blog__header.mb-3.text-center Blog and Info.
     .blog__content.d-flex
-      .media.col.d-block.d-md-flex
-        %figure.media__img.mr-2
+      .media.col.d-block.d-md-flex.mr-1.pt-3
+        %figure.media__img.mr-2.text-center
           =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
         %p.media__description はてなブログでは日々の学習の気づきを書いています
-      .media.col.d-block.d-md-flex
-        %figure.media__img.mr-2
+      .media.col.d-block.d-md-flex.pt-3
+        %figure.media__img.mr-2.text-center
           =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
         %p.media__descriprion Wantedlyには転職活動に関する情報を記載しています
 
-  %article.contact.col
+  %article.contact.col.mt-3
     %h2.contact__header.mb-3.text-center Contact Me
     .contact__form
       %p Your Name*
