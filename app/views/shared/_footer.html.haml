@@ -1,9 +1,6 @@
 %nav.footer__nav.col-12.navbar.justify-content-center
   %ul.page-nav.d-flex.justify-content-between.col-9
-    %li=link_to 'Home', '#', class: 'page-nav__list'
-    %li=link_to 'About', '#', class: 'page-nav__list'
-    %li=link_to 'Works', '#', class: 'page-nav__list'
-    %li=link_to 'Blog', '#', class: 'page-nav__list'
+    = render 'shared/page-nav'
     -if current_user
       %li=link_to 'Logout', destroy_user_session_path, method: :delete, class: 'page-nav__list'
     - else
