@@ -1,3 +1,4 @@
 %main.works.row
   - @works.each do |work|
-    = image_tag work.image.url , class: 'col-4', alt: "#{work.name}"
+    = link_to work_path(work.id), class: 'col-4' do
+      = image_tag work.image.url, alt: "#{work.name}"
