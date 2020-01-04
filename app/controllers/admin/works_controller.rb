@@ -1,7 +1,7 @@
 class Admin::WorksController < ApplicationController
   before_action :if_not_signed_in
   before_action :if_not_admin
-  before_action :set_work, only: [:create, :edit, :update, :destroy]
+  before_action :set_work, only: [:edit, :update, :destroy]
 
   def new
     @work = Work.new
@@ -50,5 +50,9 @@ class Admin::WorksController < ApplicationController
 
   def set_work
     @work = Work.find(params[:id])
+  end
+
+  def work_params
+    params.require(:work).permit(:name, :category, :image, :description, :softwear, :time, :date)
   end
 end
