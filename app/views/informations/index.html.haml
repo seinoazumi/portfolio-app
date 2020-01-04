@@ -14,20 +14,23 @@
     %h2.info__header.mb-3.text-center What I Can Do
     .info__content.d-sm-flex
       %section.app.col-sm-4.col
-        %figure.app__img
-          =image_tag "pc.jpg", alt: "プログラミングのイメージ", class: "img-fluid"
-        .app__description
-          %p Ruby on Rails, JavaScript, PHPなどを持ちいたWEBアプリケーションが製作できます。
+        =link_to works_path do
+          %figure.app__img
+            =image_tag "pc.jpg", alt: "プログラミングのイメージ", class: "img-fluid"
+          .app__description
+            %p Ruby on Rails, JavaScript, PHPなどを持ちいたWEBアプリケーションが製作できます。
       %section.design.col-sm-4.col
-        %figure.design__img
-          =image_tag "dtp.jpg", alt: "DTPのイメージ", class: "img-fluid"
-        .design__description
-          %p Photoshop, Illustratorなどを用いた紙媒体の製作物の製作実績をご紹介いたします。
+        =link_to works_path do
+          %figure.design__img
+            =image_tag "dtp.jpg", alt: "デザインのイメージ", class: "img-fluid"
+          .design__description
+            %p Photoshop, Illustrator, Wordpressなどを用いたデザイン系製作物の製作実績をご紹介いたします。
       %section.other.col-sm-4.col
-        %figure.other__img
-          =image_tag "other.jpg", alt: "その他の作業のイメージ", class: "img-fluid"
-        .other__description
-          %p 動画コンテンツ・IT講習テキスト・講演実績などその他の実績をご紹介いたします。
+        =link_to works_path do
+          %figure.other__img
+            =image_tag "other.jpg", alt: "その他の作業のイメージ", class: "img-fluid"
+          .other__description
+            %p 動画コンテンツ・IT講習テキスト・講演実績などその他の実績をご紹介いたします。
 
   %article.works.col
     %h2.works__header.mb-3.text-center Works
@@ -39,18 +42,21 @@
         =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
 
       .bottom-info.text-right
-        %p See More
+        =link_to 'See More', works_path
+
   %article.blog.col#blog
     %h2.blog__header.mb-3.text-center Blog and Info.
     .blog__content.d-flex
       .media.col.d-block.d-md-flex.mr-1.pt-3
-        %figure.media__img.mr-2.text-center
-          =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
-        %p.media__description はてなブログでは日々の学習の気づきを書いています
+        =link_to "https://qiita.com/tanutanu/", target: "_new" do
+          %figure.media__img.mr-2.text-center
+            =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
+        %p.media__description Qiitaには、主に学習を進める中で気づいたことを書いています
       .media.col.d-block.d-md-flex.pt-3
-        %figure.media__img.mr-2.text-center
-          =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
-        %p.media__descriprion Wantedlyには転職活動に関する情報を記載しています
+        =link_to "https://twitter.com/azmengineer", target: "_new" do
+          %figure.media__img.mr-2.text-center
+            =image_tag "http://placehold.jp/100x100.png", alt: "dummy"
+        %p.media__descriprion Twitterでは主に日々の暮らしのことをつぶやいています
 
   %article.contact.col.mt-3
     %h2.contact__header.mb-3.text-center Contact Me
