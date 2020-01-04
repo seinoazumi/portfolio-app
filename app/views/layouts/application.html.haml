@@ -9,10 +9,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .container
-      %header.header.row
-        =render 'shared/header'
+      =render 'shared/header'
+
     %hr
-    .container
+    .container.my-5
       = yield
 
     %hr

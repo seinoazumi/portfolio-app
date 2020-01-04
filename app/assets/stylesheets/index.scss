@@ -1,0 +1,28 @@
+.info__content > *{
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.blog__content {
+  .media {
+    border: solid 1px $gray-lv3;
+    border-radius: 3px;
+  }
+}
+
+// mdサイズ以上
+@media screen and (min-width: 768px){
+  //トップの文字を縦に中央揃えにする
+  .right-info {
+    position: relative;
+    &__inner {
+      position: absolute;
+        top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

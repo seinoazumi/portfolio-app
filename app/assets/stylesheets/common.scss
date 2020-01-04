@@ -1,0 +1,17 @@
+body {
+  @include m-plus-1p;
+  background-color: $white;
+  color: $gray-lv4;
+}
+
+li {
+  list-style-type: none;
+}
+
+a{
+  color: $gray-lv4;
+  
+  &:hover{
+    color: $gray-lv5;
+  }
+}
