@@ -18,3 +18,9 @@ a{
 
 $border-gray: solid 1px $gray-lv3;
 $border-gray-light: solid 1px $gray-lv2;
+
+@mixin icon-size {
+  font-size: 1.6rem;
+  height: 50px;
+  min-width: 50px;
+}

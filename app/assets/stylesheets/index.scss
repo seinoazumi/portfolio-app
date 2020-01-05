@@ -3,10 +3,6 @@
   margin: 0 auto;
 }
 
-.slider {
-  overflow: hidden;
-}
-
 .blog__content {
   .media {
     border: $border-gray;
@@ -14,6 +10,7 @@
   }
 }
 
+/* メディアクエリ用 CSS------------------------------------*/
 // mdサイズ以上
 @media screen and (min-width: 768px){
   //トップの文字を縦に中央揃えにする
@@ -25,4 +22,93 @@
       transform: translateY(-50%);
     }
   }
+}
+
+/*---------------------------------------------
+  JS用CSS
+---------------------------------------------*/
+/* slider ----------------------*/
+.works__content{
+  height: 200px;
+  min-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider{
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.slider .slide{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.slider .slide img{
+  position: absolute;
+  margin-left: 10px;
+}
+
+.slideshow-nav a.prev:before{
+  content: '<';
+  display: inline-block;
+}
+
+.slideshow-nav a.next:before{
+  content: '>';
+  display: inline-block;
+}
+
+.slideshow-nav a{
+  position: absolute;
+  font-weight:bold;
+  top: 50%;
+  left: 50%;
+  width:40px;
+  height: 40px;
+  margin-top: -25px;
+  font-size:25px;
+  background: rgba(220, 220, 220, 0.8);
+  border-radius:50%;
+}
+
+.slideshow-nav a.prev{
+  margin-left:-47%;
+  padding: 4px 0 0 13px;
+}
+
+.slideshow-nav a.next{
+  margin-left:39%;
+  padding: 4px 0 0 15px;
+}
+
+.slideshow-nav a.disabled{
+  display: none;
+}
+
+/* JavsScript 無効時 */
+.no-js .slideshow {
+  height: auto;
+}
+.no-js .slideshow-slides {
+  height: auto;
+  position: static;
+}
+.no-js .slideshow-slides .slide {
+  display: block;
+  height: auto;
+  position: static;
+}
+.no-js .slideshow-slides .slide img {
+  margin: auto;
+  position: static;
+}
+.no-js .slideshow-nav,
+.no-js .slideshow-indicator {
+  display: none;
 }

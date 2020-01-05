@@ -10,10 +10,9 @@
     %ul.page-nav.d-flex.justify-content-between.pt-3
       = render 'shared/page-nav'
 
-  -# スマホ版のメニューを作るときに復活させる
   %nav.header__nav--sp.d-md-none
-    .menu-btn.pt-4
+    .menu-btn.pt-4#menu-btn
       = fa_icon("bars")
     .sp-page-nav
-      %ul.sp-page-nav__block.text-center
+      %ul.sp-page-nav__block.text-center#page-nav-block
         = render 'shared/page-nav'

@@ -36,13 +36,18 @@
     %h2.works__header.mb-3.text-center Works
     .works__content
       .slider.d-flex
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
+        - @works.each do |work|
+          -# 登録作品数がもっと増えたら復活させる
+          -# - if work.category == "web_design"
+          %figure.slide
+            =image_tag work.images[0].url, alt:"slider", class: "slide__img", width: 280
+      .slideshow-nav
+        %a.prev{:href => "#"}
+        %a.next{:href => "#"}
+      .slideshow-indicator
 
-      .bottom-info.text-right
-        =link_to 'See More', works_path
+    .bottom-info.text-right
+      =link_to 'See More', works_path
 
   %article.blog.col#blog
     %h2.blog__header.mb-3.text-center Blog and Info.

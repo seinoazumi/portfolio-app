@@ -1,10 +1,8 @@
 .social-link {
   &__icon {
+    @include icon-size;
     border: $border-gray;
     border-radius: 50%;
-    font-size: 1.6rem;
-    height: 50px;
-    min-width: 50px;
   }
 }
 
@@ -33,4 +31,14 @@
       border-bottom: $border-gray-light;
     }
   }
+}
+
+// JS用
+
+.sp-page-nav__block {
+  display: none;
+}
+
+.open {
+  display: block;
 }
