@@ -5,7 +5,6 @@ class WorksController < ApplicationController
 
   def show
     @work = Work.find(params[:id])
-    # binding.pry
   end
 
   private

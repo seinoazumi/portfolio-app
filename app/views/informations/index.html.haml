@@ -36,10 +36,11 @@
     %h2.works__header.mb-3.text-center Works
     .works__content
       .slider.d-flex
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
-        =image_tag "http://placehold.jp/270x200.png", alt:"slider", class: "slide mr-1"
+        - @works.each do |work|
+          - if work.category == "web_design"
+            %figure.slide
+              =image_tag work.images[0].url, alt:"slider", class: "slide__img mr-1"
+        
 
       .bottom-info.text-right
         =link_to 'See More', works_path
