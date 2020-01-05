@@ -1,7 +1,7 @@
 %main.works.row
   - @works.each do |work|
     = link_to work_path(work.id), class: 'col-4' do
-      = image_tag work.image.url, alt: "#{work.name}", class: "image-fluid"
+      = image_tag work.images[0].url, alt: "#{work.name}", class: "image-fluid"
 
 .col.text-center
   - if current_user.admin?

@@ -1,5 +1,6 @@
 class Work < ApplicationRecord
-  mount_uploader :image, ImageUploader
+  mount_uploaders :images, ImageUploader
+  serialize :images, JSON
 
   enum category: {
     default: 0,
