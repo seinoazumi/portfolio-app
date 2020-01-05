@@ -5,7 +5,8 @@
   
   %p
     = f.label :category, "カテゴリー："
-    = f.select :category, [["Webデザイン", 0],["DTPデザイン", 1],["プログラミング", 2],["その他",3]]
+    = f.select :category, Work.categories_i18n.keys.map{|k| [I18n.t("enum.work.category.#{k}"), k]}
+    -# = f.select :category, [["Webデザイン", 0],["DTPデザイン", 1],["プログラミング", 2],["その他",3]]
 
   %p
     = f.label :image, "画像："
