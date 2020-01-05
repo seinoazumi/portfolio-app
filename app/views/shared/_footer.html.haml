@@ -5,7 +5,11 @@
       %li=link_to 'Logout', destroy_user_session_path, method: :delete, class: 'page-nav__list'
     - else
       %li=link_to 'Admin Login', new_user_session_path, class: 'page-nav__list'
+
 %small.copy.col-12.text-center
   Copy Right &copy;
   %span= @year
   Seino Azumi, All Rights Reserved.
+
+.back-to-top#back-to-top
+  = fa_icon("arrow-up")
