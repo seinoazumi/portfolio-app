@@ -10,7 +10,7 @@ $(document).ready(function(){
     currentIndex = 0,
     duration = 200,
     easing = 'linear';
-  
+
     // 各スライドの位置を決定.インジケーターを生成-----------------//
     $slides.each(function(i){
       $(this).css({left: 280 * i + 'px'});

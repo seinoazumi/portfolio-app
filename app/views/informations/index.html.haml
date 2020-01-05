@@ -37,13 +37,17 @@
     .works__content
       .slider.d-flex
         - @works.each do |work|
-          - if work.category == "web_design"
-            %figure.slide
-              =image_tag work.images[0].url, alt:"slider", class: "slide__img mr-1"
-        
+          -# 登録作品数がもっと増えたら復活させる
+          -# - if work.category == "web_design"
+          %figure.slide
+            =image_tag work.images[0].url, alt:"slider", class: "slide__img", width: 280
+      .slideshow-nav
+        %a.prev{:href => "#"}
+        %a.next{:href => "#"}
+      .slideshow-indicator
 
-      .bottom-info.text-right
-        =link_to 'See More', works_path
+    .bottom-info.text-right
+      =link_to 'See More', works_path
 
   %article.blog.col#blog
     %h2.blog__header.mb-3.text-center Blog and Info.
