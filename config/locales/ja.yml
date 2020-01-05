@@ -1,0 +1,9 @@
+ja:
+  enum:
+    work:
+      category:
+        default: "--"
+        programing: "プログラミング"
+        web_design: "WEBデザイン"
+        dtp_design: "DTPデザイン"
+        other: "その他"
