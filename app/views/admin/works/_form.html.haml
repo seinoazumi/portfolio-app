@@ -8,8 +8,8 @@
     = f.select :category, Work.categories_i18n.keys.map{|k| [I18n.t("enum.work.category.#{k}"), k]}
 
   %p.form-group
-    = f.label :image, "画像："
-    = f.file_field :image
+    = f.label :images, "画像："
+    = f.file_field :images, multiple: true
 
   %p.form-group
     = f.label :description, "作品の説明:"
