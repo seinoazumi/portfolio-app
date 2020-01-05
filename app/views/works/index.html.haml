@@ -1,8 +1,8 @@
 %main.works.row
   - @works.each do |work|
     = link_to work_path(work.id), class: 'col-4' do
-      = image_tag work.images[0].url, alt: "#{work.name}", class: "image-fluid"
+      = image_tag work.images[0].url, alt: "#{work.name}", class: "image-fluid works__img"
 
 .col.text-center
-  - if current_user.admin?
+  - if current_user && current_user.admin?
     = link_to "作品投稿ページへ", new_admin_work_path
