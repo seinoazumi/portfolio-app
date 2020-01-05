@@ -12,6 +12,12 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+  ## Work
+  | column   | data type |
+  |----------|-----------|
+  | name     | string    |
+  | category | integer   |
+  | 
 
 * Database initialization
 
