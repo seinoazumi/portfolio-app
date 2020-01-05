@@ -19,9 +19,13 @@
     = f.label :time, "制作時間："
     = f.text_field :time
 
-    -# %p.form-group
-    -#   = f.label :softwear, "使用ソフト："
-    -#   = f.text_field :softwear
+  %p.form-group
+    = f.label :language, "使用言語："
+    = f.text_field :language
+
+  %p.form-group
+    = f.label :softwear, "使用ソフト等："
+    = f.text_field :softwear
   
   %p.form-group
     = f.label :date, "制作時期："

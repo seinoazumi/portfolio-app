@@ -1,3 +1,18 @@
 // Place all the styles related to the works controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// works/indexページ
+.works {
+  &__img {
+    max-width: 100%;
+  }
+}
+
+// works/showページ
+.work {
+  &__l {
+    max-height: 500px;
+    overflow: scroll;
+  }
+}

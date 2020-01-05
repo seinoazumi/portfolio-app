@@ -1,10 +1,11 @@
 class WorksController < ApplicationController
   def index
-    @works = Work.all
+    @works = Work.all.order(date: "DESC")
   end
 
   def show
     @work = Work.find(params[:id])
+    # binding.pry
   end
 
   private
