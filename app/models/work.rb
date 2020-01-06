@@ -10,7 +10,7 @@ class Work < ApplicationRecord
   end 
 
   # カスタムバリデーション
-  validation :images_should_be_more_than_two
+  validate :images_should_be_more_than_two
 
   # アップローダーの設定
   mount_uploaders :images, ImageUploader

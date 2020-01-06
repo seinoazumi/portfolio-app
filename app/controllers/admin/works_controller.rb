@@ -12,7 +12,7 @@ class Admin::WorksController < ApplicationController
     if @work.save
       redirect_to works_path
     else
-      render new_work
+      redirect_to new_admin_work_path
     end
   end
 
@@ -25,7 +25,7 @@ class Admin::WorksController < ApplicationController
     if @work.update(work_params)
       redirect_to works_path
     else
-      render edit_work_path
+      redirect_to edit_admin_work_path
     end
   end
 
