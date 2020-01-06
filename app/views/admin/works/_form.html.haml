@@ -16,6 +16,10 @@
     = f.text_area :description, class: 'form-control'
 
   %p.form-group
+    = f.label :url, "作品・関連URL："
+    = f.text_field :url
+
+  %p.form-group
     = f.label :time, "制作時間："
     = f.text_field :time
 
@@ -30,5 +34,13 @@
   %p.form-group
     = f.label :date, "制作時期："
     = f.text_field :date
+
+  %p.form-group
+    = f.label :date, "制作時期："
+    = f.text_field :date
+
+  %p.form-group
+    = f.label :recomend, "トップスライダーに表示："
+    = f.check_box :recomend , {class: "check_box"}, true, false
 
   =f.submit class: "btn btn-primary"
