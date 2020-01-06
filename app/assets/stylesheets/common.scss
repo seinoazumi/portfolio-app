@@ -19,8 +19,10 @@ a{
 $border-gray: solid 1px $gray-lv3;
 $border-gray-light: solid 1px $gray-lv2;
 
-@mixin icon-size {
+@mixin icon-in-circle {
   font-size: 1.6rem;
   height: 50px;
   min-width: 50px;
+  border: $border-gray;
+  border-radius: 50%;
 }
