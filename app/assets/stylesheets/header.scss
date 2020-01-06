@@ -1,8 +1,6 @@
 .social-link {
   &__icon {
-    @include icon-size;
-    border: $border-gray;
-    border-radius: 50%;
+    @include icon-in-circle;
   }
 }
 

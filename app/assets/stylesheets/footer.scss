@@ -4,8 +4,6 @@
 // トップに戻るボタン
 
 .back-to-top {
-  @include icon-size;
-  position: fixed;
-    bottom: 15%;
-    right: 10%;
+  @include icon-in-circle;
+  text-align: center;
 }

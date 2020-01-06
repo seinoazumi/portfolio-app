@@ -37,10 +37,9 @@
     .works__content
       .slider.d-flex
         - @works.each do |work|
-          -# 登録作品数がもっと増えたら復活させる
-          -# - if work.category == "web_design"
-          %figure.slide
-            =image_tag work.images[0].url, alt:"slider", class: "slide__img", width: 280
+          - if work.recomend = 1
+            %figure.slide
+              =image_tag work.images[0].url, alt:"slider", class: "slide__img", width: 280
       .slideshow-nav
         %a.prev{:href => "#"}
         %a.next{:href => "#"}
