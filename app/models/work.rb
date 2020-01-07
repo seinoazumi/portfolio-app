@@ -1,5 +1,4 @@
 class Work < ApplicationRecord
-
   # モデルのバリデーション
   with_options presence: true do
     validates :category
@@ -25,15 +24,6 @@ class Work < ApplicationRecord
     dtp_design: 3,
     other: 4
   }, _prefix: true
-
-  with_options presence: true do
-    validates :category
-    validates :date
-    validates :description
-    validates :images
-    validates :name
-    validates :time
-  end 
 
   # カスタムバリデーションのメソッド
   def images_should_be_more_than_two

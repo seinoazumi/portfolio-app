@@ -1,5 +1,5 @@
 ja:
-  enum:
+  enums:
     work:
       category:
         default: "--"

@@ -5,7 +5,7 @@
   
   %p.form-group
     = f.label :category, "カテゴリー："
-    = f.select :category, Work.categories_i18n.keys.map{|k| [I18n.t("enum.work.category.#{k}"), k]}
+    = f.select :category, Work.categories_i18n.keys.map{|k| [I18n.t("enums.work.category.#{k}"), k]}
 
   %p.form-group
     = f.label :images, "画像："
