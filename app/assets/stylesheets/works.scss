@@ -6,8 +6,10 @@
 .works {
   &__img {
     margin-top: 10px;
-    max-width: 300px;
-    width: 100%;
+    width:  280px;
+    &:hover {
+      opacity: .8;
+    }
   }
 }
 
