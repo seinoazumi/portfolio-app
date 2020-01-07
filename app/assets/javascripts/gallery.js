@@ -1,14 +1,12 @@
-$(document).ready(function(){
-  $(window).on('load',function(){
-
+$(document).on('turbolinks:load', function(){
     var $container = $('#works');
+
     $container.imagesLoaded( function() {
       $container.masonry({ //mansonryの対象を#worksにする
-        itemSelector: '.works__img',
-        columnWidth: '.img-fluid',
-        gutter: 0
+        itemSelector: '.works__frame',
+        columnWidth:  280,
+        gutter: 20
       });  
     });
-  });
 
 });

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   // 関数の定義--------------------------
     var $container = $('.works__content'),
     $slideGroup = $container.find('.slider'),
