@@ -1,6 +1,7 @@
-$(document).ready(function(){
-  $(window).on('load',function(){
+$(document).on('turbolinks:load', function(){
 
+    console.log("gal");
+    
     var $container = $('#works');
     $container.imagesLoaded( function() {
       $container.masonry({ //mansonryの対象を#worksにする
@@ -9,6 +10,5 @@ $(document).ready(function(){
         gutter: 0
       });  
     });
-  });
 
 });
