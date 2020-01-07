@@ -4,7 +4,7 @@ $(document).on('turbolinks:load', function(){
     $container.imagesLoaded( function() {
       $container.masonry({ //mansonryの対象を#worksにする
         itemSelector: '.works__frame',
-        columnWidth:  280,
+        columnWidth:  300,
         gutter: 20
       });  
     });

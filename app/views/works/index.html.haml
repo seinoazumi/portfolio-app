@@ -1,8 +1,7 @@
-%main.works#works.d-flex.justify-content-center
-
+%main.works#works.row
   - @works.each do |work|
     = link_to work_path(work.id), class: 'works__frame' do
-      = image_tag work.images[0].url, alt: "#{work.name}", class: "works__img "
+      = image_tag work.images[0].url, alt: "#{work.name}", class: "works__img", width: 300
 
 .col.text-center
   - if current_user && current_user.admin?
