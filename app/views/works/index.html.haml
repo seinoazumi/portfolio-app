@@ -1,7 +1,7 @@
-%main.works.row
+%main.works#works.row
   - @works.each do |work|
-    = link_to work_path(work.id), class: 'col-4' do
-      = image_tag work.images[0].url, alt: "#{work.name}", class: "image-fluid works__img"
+    = link_to work_path(work.id), class: 'col-12 col-sm-6 col-md-4' do
+      = image_tag work.images[0].url, alt: "#{work.name}", class: "img-fluid mt-1 works__img"
 
 .col.text-center
   - if current_user && current_user.admin?
