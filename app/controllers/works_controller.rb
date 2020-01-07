@@ -10,6 +10,6 @@ class WorksController < ApplicationController
   private
 
   def work_params
-    params.require(:work).permit(:name, :category, {images: []}, :description, :softwear, :time, :date)
+    params.require(:work).permit(:name, :category, {images: []}, :description, :softwear, :time, :date, :language, :url, :recomend)
   end
 end
