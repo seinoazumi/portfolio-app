@@ -5,6 +5,7 @@ class WorksController < ApplicationController
 
   def show
     @work = Work.find(params[:id])
+    @date = @work.date.strftime("%Y. %m")
   end
 
   private

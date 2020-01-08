@@ -29,11 +29,7 @@
 
     %p.work__info__date
       制作時期：
-      %span
-        = @work.date.year
-        年
-        = @work.date.month
-        月
+      %span= @date
 
   .pagenation.col.mt-3.text-center
     = link_to "作品一覧へ", works_path
