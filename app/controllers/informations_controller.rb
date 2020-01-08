@@ -1,7 +1,7 @@
 class InformationsController < ApplicationController
 
   def index
-    @works = Work.all.order(date: "DESC")
+    @works = Work.where(category: "programing").order(date: "DESC")
   end
 
   def about

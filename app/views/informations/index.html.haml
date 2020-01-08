@@ -37,10 +37,10 @@
     .works__content
       .slider.d-flex
         - @works.each do |work|
-          - if work.category == "programing"
-            =link_to work_path(work.id) do
-              %figure.slide
-                =image_tag work.images[0].url, alt:"slider", class: "slide__img", width: 280
+          =link_to work_path(work.id) do
+            %figure.slide
+              =image_tag work.images[0].url, alt:"slider", class: "slide__img", width: 280
+              
       .slideshow-nav
         %a.prev{:href => "#"}
         %a.next{:href => "#"}
