@@ -67,14 +67,16 @@
     %h2.contact__header.mb-3.text-center Contact Me
     .contact__form
       = form_with model: @inquiry, local: true do |f|
-        %p.form_group
-          = f.label :name, "Your Name*"
+        %p.form_group.d-flex
+          = f.label :name, "Your Name*", class: "col-2"
           = f.text_field :name, class: "form-control"
         
-        %p.form_group
-          = f.label :email, "Your E-mail*"
+        %p.form_group.d-flex
+          = f.label :email, "Your E-mail*", class: "col-2"
           = f.text_field :email, class: "form-control"
         
-        %p.form_group
-          = f.label :message, "Message*"
-          = f.text_field :message, class: "form-control"
+        %p.form_group.d-flex
+          = f.label :message, "Message*", class: "col-2"
+          = f.text_area :message, class: "form-control"
+        .d-flex.justify-content-center
+          =f.submit "SENDSEND",class: "btn btn-default"

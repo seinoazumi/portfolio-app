@@ -1,5 +1,5 @@
 class InquiriesController < ApplicationController
-  def creare
+  def create
     @inquiry = Inquiry.new(inquiry_params)
     if @inquiry.save
       flash[:success] = "お問い合わせを受け付けました"
