@@ -66,8 +66,15 @@
   %article.contact.col.mt-3
     %h2.contact__header.mb-3.text-center Contact Me
     .contact__form
-      %p.text-center お問い合わせフォームは準備中です。TwitterのDMなどでお気軽にご連絡ください
-      %p Your Name*
-      %p Subject*
-      %p Your Email*
-      %p.submit Submit
+      = form_with model: @inquiry, local: true do |f|
+        %p.form_group
+          = f.label :name, "Your Name*"
+          = f.text_field :name, class: "form-control"
+        
+        %p.form_group
+          = f.label :email, "Your E-mail*"
+          = f.text_field :email, class: "form-control"
+        
+        %p.form_group
+          = f.label :message, "Message*"
+          = f.text_field :message, class: "form-control"
