@@ -1,8 +1,9 @@
-%main.works#works.row
-  - @works.each do |work|
-    = link_to work_path(work.id), class: 'works__frame' do
-      = image_tag work.images[0].url, alt: "#{work.name}", class: "works__img", width: 300
+.row.d-flex.justify-content-center
+  %main.works#works.col.col-md-9
+    - @works.each do |work|
+      = link_to work_path(work.id), class: 'works__frame' do
+        = image_tag work.images[0].url, alt: "#{work.name}", class: "works__img", width: 300
 
-.col.text-center
-  - if current_user && current_user.admin?
-    = link_to "作品投稿ページへ", new_admin_work_path
+  .col.text-center
+    - if current_user && current_user.admin?
+      = link_to "作品投稿ページへ", new_admin_work_path
