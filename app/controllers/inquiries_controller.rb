@@ -4,6 +4,7 @@ class InquiriesController < ApplicationController
     if @inquiry.save
       flash[:success] = "お問い合わせを受け付けました"
       redirect_to root_path
+      InquiryMailer.send_mail(@inquiry).deliver_now
     else
       flash[:danger] = "メッセージの送信に失敗しました"
       render root_path
