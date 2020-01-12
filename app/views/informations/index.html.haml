@@ -1,3 +1,4 @@
+= render 'layouts/flash'
 .page-top.d-sm-flex
   .left-info.col
     %figure.text-center
@@ -65,9 +66,20 @@
 
   %article.contact.col.mt-3
     %h2.contact__header.mb-3.text-center Contact Me
-    .contact__form
-      %p.text-center お問い合わせフォームは準備中です。TwitterのDMなどでお気軽にご連絡ください
-      %p Your Name*
-      %p Subject*
-      %p Your Email*
-      %p.submit Submit
+    .d-flex.justify-content-center
+      .contact__form.col-md-9
+        %p.col ※現状ではフォームはベータ版となっております。恐れ入りますがTwitterのDMにてご連絡いただけますと幸いです。
+        = form_with model: @inquiry, local: true do |f|
+          %p.form_group.d-md-flex
+            = f.label :name, "Your Name*", class: "col-md-2"
+            = f.text_field :name, class: "form-control inquiry-form"
+          
+          %p.form_group.d-md-flex
+            = f.label :email, "Your E-mail*", class: "col-md-2"
+            = f.text_field :email, class: "form-control inquiry-form"
+          
+          %p.form_group.d-md-flex
+            = f.label :message, "Message*", class: "col-md-2"
+            = f.text_area :message, class: "form-control inquiry-form-text-area"
+          .d-flex.justify-content-center
+            =f.submit "Send Message",class: "btn btn-default"
