@@ -5,6 +5,7 @@ class InquiriesController < ApplicationController
       flash[:success] = "お問い合わせを受け付けました"
       redirect_to root_path
     else
+      flash[:danger] = "メッセージの送信に失敗しました"
       render root_path
     end
   end

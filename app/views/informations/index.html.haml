@@ -1,3 +1,4 @@
+= render 'layouts/flash'
 .page-top.d-sm-flex
   .left-info.col
     %figure.text-center
@@ -79,4 +80,4 @@
           = f.label :message, "Message*", class: "col-2"
           = f.text_area :message, class: "form-control"
         .d-flex.justify-content-center
-          =f.submit "SENDSEND",class: "btn btn-default"
+          =f.submit "Send Message",class: "btn btn-default"
