@@ -21,7 +21,7 @@
       制作時間：
       %span= @work.time
       時間
-    %p.work__info__description= @work.description
+    %p.work__info__description= simple_format(@work.description)
 
     %p.work__info__url
       作品／関連URL：
