@@ -1,4 +1,7 @@
-= render 'layouts/flash'
+- if flash[:notice]
+  - flash.each do |key, value|
+    =content_tag(:div, value, class: "alert alert-success", role: "alert")
+
 .page-top.d-sm-flex
   .left-info.col
     %figure.text-center
