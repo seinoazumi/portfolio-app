@@ -1,4 +1,26 @@
+# == Schema Information
+#
+# Table name: works
+#
+#  id          :integer          not null, primary key
+#  category    :integer
+#  date        :date
+#  description :text
+#  images      :string
+#  language    :string
+#  name        :string
+#  recomend    :boolean          default(FALSE)
+#  softwear    :string
+#  time        :string
+#  url         :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Work < ApplicationRecord
+  has_many :work_category
+  has_many :categories, through :work_category
+
   # モデルのバリデーション
   with_options presence: true do
     validates :category

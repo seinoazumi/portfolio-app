@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: works
+#
+#  id          :integer          not null, primary key
+#  category    :integer
+#  date        :date
+#  description :text
+#  images      :string
+#  language    :string
+#  name        :string
+#  recomend    :boolean          default(FALSE)
+#  softwear    :string
+#  time        :string
+#  url         :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 FactoryBot.define do
   image1 = Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/image1.jpg'))
   image2 = Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/image2.jpg'))
