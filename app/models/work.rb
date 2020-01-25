@@ -19,7 +19,8 @@
 
 class Work < ApplicationRecord
   has_many :work_category
-  has_many :categories, through :work_category
+  has_many :categories, through: :work_category
+  accepts_nested_attributes_for :work_category
 
   # モデルのバリデーション
   with_options presence: true do

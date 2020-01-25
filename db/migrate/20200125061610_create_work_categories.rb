@@ -1,9 +1,8 @@
 class CreateWorkCategories < ActiveRecord::Migration[5.2]
   def change
     create_table :work_categories do |t|
-      t.references :work, foreign_key: true
-      t.references :category, foreign_key: true
-
+      t.integer :category_id
+      t.integer :work_id
       t.timestamps
     end
   end
