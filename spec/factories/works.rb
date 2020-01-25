@@ -3,7 +3,6 @@
 # Table name: works
 #
 #  id          :integer          not null, primary key
-#  category    :integer
 #  date        :date
 #  description :text
 #  images      :string

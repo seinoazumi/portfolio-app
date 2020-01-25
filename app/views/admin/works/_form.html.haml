@@ -3,9 +3,10 @@
     = f.label :name, "作品名："
     = f.text_field :name, class: 'form-control'
   
+  %p カテゴリー：
   %p.form-group
-    = f.label :category, "カテゴリー："
-    = f.select :category, Work.categories_i18n.keys.map{|k| [I18n.t("enums.work.category.#{k}"), k]}
+    = collection_check_boxes(:work, :category_ids, Category.all, :id, :name ) do |t|
+      =t.label { t.check_box + t.text }
 
   %p.form-group
     = f.label :images, "画像："
