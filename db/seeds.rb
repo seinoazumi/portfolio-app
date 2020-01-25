@@ -6,5 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.new(:email => 'test1@gmail.com', :password => 'test123', :admin => 1)
-user.save!
+# user = User.new(:email => 'test1@gmail.com', :password => 'test123', :admin => 1)
+# user.save!
+
+categories = Category.create([
+  {name: "プログラミング"},
+  {name: "WEBデザイン"},
+  {name: "DTPデザイン"},
+  {name: "その他"}
+])
