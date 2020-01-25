@@ -6,4 +6,14 @@ class ApplicationController < ActionController::Base
     d = Date.today
     @year = d.year
   end
+
+  private
+  
+  def if_not_admin
+    redirect_to root_path unless current_user.admin?
+  end
+  
+  def if_not_signed_in
+    redirect_to root_path unless user_signed_in?
+  end
 end
