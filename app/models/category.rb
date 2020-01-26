@@ -9,6 +9,6 @@
 #
 
 class Category < ApplicationRecord
-  has_many :works, through: :work_category
-  has_many :work_category
+  has_many :work_categories
+  has_many :works, through: :work_categories
 end
