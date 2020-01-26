@@ -6,8 +6,10 @@ class WorksController < ApplicationController
 
   def show
     @work = Work.find(params[:id])
-    @date = @work.date.strftime("%Y. %m")
-    
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
 end

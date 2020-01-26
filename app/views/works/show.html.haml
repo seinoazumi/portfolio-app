@@ -30,7 +30,7 @@
 
     %p.work__info__date
       制作時期：
-      %span= @date
+      %span= @work.date.strftime("%Y. %m")
 
   .pagenation.col.mt-3.text-center
     = link_to "作品一覧へ", works_path

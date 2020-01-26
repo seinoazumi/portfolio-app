@@ -2,8 +2,9 @@
   %main.works#works.col.col-md-10
     - @works.each do |work|
       = link_to work_path(work.id), class: 'works__frame' do
-        = image_tag work.images[0].url, alt: "#{work.name}", class: "works__img", id:"work-img", data: {id: work.id },width: 300
+        = image_tag work.images[0].url, alt: "#{work.name}", class: "works__img", id:"work-img", data: {id: work.id }, width: 300
 
+  #modal
 .text-center
   - if current_user && current_user.admin?
     = link_to "作品投稿ページへ", new_admin_work_path
