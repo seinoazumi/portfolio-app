@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_11_231028) do
+ActiveRecord::Schema.define(version: 2020_01_25_134428) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "inquiries", force: :cascade do |t|
     t.string "name"
@@ -33,9 +39,17 @@ ActiveRecord::Schema.define(version: 2020_01_11_231028) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "work_categories", force: :cascade do |t|
+    t.integer "work_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_work_categories_on_category_id"
+    t.index ["work_id"], name: "index_work_categories_on_work_id"
+  end
+
   create_table "works", force: :cascade do |t|
     t.string "name"
-    t.integer "category"
     t.string "images"
     t.text "description"
     t.string "time"

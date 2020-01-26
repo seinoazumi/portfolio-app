@@ -3,12 +3,13 @@
     = image_tag @work.images[1].url, class: 'work__img w-100 img-fluid'
   
   .work__info.col-sm-6
-    %h3.work__info__title= @work.name
+    %h3.work__info__title= @work.name 
     %p.work__info__category
       カテゴリー：
-      %span= @work.category_i18n
+      - @work.categories.each do |c|
+        = c.name + ','
 
-    - if @work.category == "programing" || @work.category == "web_design"
+    - if @work.categories.include?(1) || @work.categories.include?(2)
       %p.work__info__longuage
         使用言語：
         %span= @work.language

@@ -40,19 +40,11 @@ class Admin::WorksController < ApplicationController
 
   private
 
-  def if_not_signed_in
-    redirect_to root_path unless user_signed_in?
-  end
-
-  def if_not_admin
-    redirect_to root_path unless current_user.admin?
-  end
-
   def set_work
     @work = Work.find(params[:id])
   end
 
   def work_params
-    params.require(:work).permit(:name, :category, {images: []}, :description, :softwear, :time, :date, :language, :url, :recomend)
+    params.require(:work).permit(:name, :category, {images: []}, :description, :softwear, :time, :date, :language, :url, :recomend, { category_ids: [] })
   end
 end
