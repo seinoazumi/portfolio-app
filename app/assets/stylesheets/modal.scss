@@ -31,9 +31,10 @@
 .modal-window{
   background: $white;
   border-radius: 20px;
-  position: absolute;
+  position: fixed;
     top:15vh;
     left: 50%;
   transform: translateX(-50%);
   word-wrap: break-word;
+  z-index: 100;
 }
