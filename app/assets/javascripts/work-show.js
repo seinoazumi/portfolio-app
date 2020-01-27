@@ -42,7 +42,6 @@ $(document).on('turbolinks:load', function(){
     <div class="pagenation col mt-3 text-center">
     <a href="/works">作品一覧へ</a>
     </div>
-    <a href="/admin/works/${data.id}/edit">この作品を編集する</a>
     </main>`;
     return workContainer;
   };
