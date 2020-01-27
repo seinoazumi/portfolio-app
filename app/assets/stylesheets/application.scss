@@ -15,15 +15,21 @@
  */
 
  // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
+// 外部CDN等
+ @import "bootstrap";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p|Noto+Serif+JP|Raleway|Roboto+Slab&display=swap');
 
+// 全体
 @import "colors.scss";
 @import "fonts.scss";
 @import "common.scss";
 
+// 各ページ
 @import "header.scss";
 @import "footer.scss";
 @import "index.scss";
 @import "works.scss";
+
+// JS
+@import "modal.scss";

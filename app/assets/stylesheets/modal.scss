@@ -1,0 +1,39 @@
+// Place all the styles related to the inquiries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.modal-close-btn {
+  background-color: $gray-lv4-hue;
+  border-radius: 50%;
+  color: $white;
+  font-size: 2rem;
+  height: 3rem;
+  position: absolute;
+    right: -20px;
+    top: -20px;
+  text-align: center;
+  width: 3rem;
+}
+
+.modal-outer {
+  background-color: #1801018a;
+  display: none;
+  position: absolute;
+    top:0;
+    left: 0;
+  height: 300%;
+  width: 100%;
+}
+
+.modal-open {
+  display: block;
+}
+
+.modal-window{
+  background: $white;
+  border-radius: 20px;
+  position: absolute;
+    top:15vh;
+    left: 50%;
+  transform: translateX(-50%);
+  word-wrap: break-word;
+}

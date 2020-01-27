@@ -6,6 +6,10 @@ class WorksController < ApplicationController
 
   def show
     @work = Work.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json
+    end
     # TODO:ビューにカテゴリー名の名前だけを入れた配列を返したい
     # @categories = @work.categories.each do |c|
     #   cat = []
