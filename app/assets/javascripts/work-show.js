@@ -47,7 +47,7 @@ $(document).on('turbolinks:load', function(){
     return workContainer;
   };
 
-  $workImg.on('click', function buildModal(e){
+  $workImg.on('click', function(e){
     $workId = $(this).data('id'); 
     e.preventDefault(); //画面の遷移を止める
     $.ajax({
