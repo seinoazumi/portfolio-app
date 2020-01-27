@@ -9,10 +9,11 @@
       - @work.categories.each do |c|
         = c.name + ','
 
-    - if @work.categories.include?(1) || @work.categories.include?(2)
-      %p.work__info__longuage
-        使用言語：
-        %span= @work.language
+    -# TODO: カテゴリに”プログラミング”かWEBデザインが含まれている時のみ”使用言語”を表示する
+    -# - if @work.categories.include?("プログラミング") || @work.categories.include?("WEBデザイン")
+    %p.work__info__longuage
+      使用言語：
+      %span= @work.language
 
     %p.work__info__softwear
       使用ソフト等：
@@ -30,7 +31,7 @@
 
     %p.work__info__date
       制作時期：
-      %span= @date
+      %span= @work.date.strftime("%Y. %m")
 
   .pagenation.col.mt-3.text-center
     = link_to "作品一覧へ", works_path
