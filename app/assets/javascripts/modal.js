@@ -4,11 +4,10 @@ $(document).on('turbolinks:load', function(){
       $modal = $('#modal');
 
   $workImg.on('click', function(){
-    $modal.empty();
     $frame.addClass('modal-open');
   });
 
-  $('#modal-outer, #modal-close-btn').on('click', function(){
+  $('#modal-close-btn').on('click', function(){
     $frame.removeClass('modal-open');
   });
 });

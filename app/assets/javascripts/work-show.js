@@ -57,6 +57,7 @@ $(document).on('turbolinks:load', function(){
       })
       .done(function (data) {
         var showWork = buildHtml(data);
+        $modal.empty();
         $modal.append(showWork);
       })
       .fail(function (){
