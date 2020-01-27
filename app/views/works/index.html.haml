@@ -4,7 +4,10 @@
       = link_to work_path(work.id), class: 'works__frame' do
         = image_tag work.images[0].url, alt: "#{work.name}", class: "works__img", data: {id: work.id }, width: 300
 
-  #modal
+#modal-outer.modal-outer
+  .modal-window.col-10.p-5
+    #modal-close-btn.modal-close-btn=fa_icon 'times'
+    #modal
 .text-center
   - if current_user && current_user.admin?
     = link_to "作品投稿ページへ", new_admin_work_path
