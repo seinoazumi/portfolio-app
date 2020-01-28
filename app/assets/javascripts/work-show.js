@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function(){
     <h3 class="work__info__title">${data.name}</h3>
     <p class="work__info__category">
     カテゴリー：
-    ${workCategories}
+    ${workCategories.map(v => v.name).join('、')}
     </p>
     <p class="work__info__longuage">
     使用言語：
