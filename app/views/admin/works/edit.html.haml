@@ -1,4 +1,4 @@
 %h2 アイテムの編集
 = render 'form'
 
-%button= link_to "削除する", work_path(@work.id), method: :delete
+= link_to "削除する", work_path(@work.id), method: :delete, data: {confirm: "削除しますか？"}, class: "btn btn-default"
