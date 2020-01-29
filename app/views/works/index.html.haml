@@ -1,3 +1,9 @@
+.row.d-flex
+  = form_tag works_path, method: :get, class: "works__search" do
+    = select_tag :category_id, options_from_collection_for_select( Category.all, :id, :name, params[:category_id]), { prompt: "カテゴリーで絞り込み", class: "select__option", onchange: "submit(this.form);"}
+  -# = collection_check_boxes(:work, :category_ids, Category.all, :id, :name ) do |t|
+  -#   =t.label { t.check_box + t.text }
+%hr
 .row.d-flex.justify-content-center
   %main.works#works.col.col-md-10
     - @works.each do |work|
