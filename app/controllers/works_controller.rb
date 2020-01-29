@@ -1,7 +1,7 @@
 class WorksController < ApplicationController
-  
+
   def index
-    @works = Work.all.order(date: "DESC")
+    @works = params[:category_id].present? ? Category.find(params[:category_id]).works : Work.all
   end
 
   def show
@@ -10,12 +10,6 @@ class WorksController < ApplicationController
       format.html
       format.json
     end
-    # TODO:ビューにカテゴリー名の名前だけを入れた配列を返したい
-    # @categories = @work.categories.each do |c|
-    #   cat = []
-    #   cat << c.name
-    #   return cat
-    # end
   end
 
 end

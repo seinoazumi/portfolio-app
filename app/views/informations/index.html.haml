@@ -1,88 +1,88 @@
 - if flash[:notice]
   - flash.each do |key, value|
     =content_tag(:div, value, class: "alert alert-success", role: "alert")
+.container.my-5
+  .page-top.d-sm-flex
+    .left-info.col
+      %figure.text-center
+        =image_tag "goldfish1.jpg", class: "keyvis", alt: "トップ画像", width: "300"
+    .right-info.col
+      .right-info__inner
+        %h1.site-title.text-center Azumi's Portfolio
+        %section.site-description
+          %p 清野あずみのポートフォリオサイトです。
+          %p 地域で頑張っている誰かや、生きづらさを抱える人を支える誰かを、デザインやプログラミングを通じて応援できればと思っています。
 
-.page-top.d-sm-flex
-  .left-info.col
-    %figure.text-center
-      =image_tag "goldfish1.jpg", class: "keyvis", alt: "トップ画像", width: "300"
-  .right-info.col
-    .right-info__inner
-      %h1.site-title.text-center Azumi's Portfolio
-      %section.site-description
-        %p 清野あずみのポートフォリオサイトです。
-        %p 地域で頑張っている誰かや、生きづらさを抱える人を支える誰かを、デザインやプログラミングを通じて応援できればと思っています。
+  %main.col.mt-5
+    %article.info
+      %h2.info__header.mb-3.text-center What I Can Do
+      .info__content.d-sm-flex
+        %section.app.col-sm-4.col
+          =link_to works_path do
+            %figure.app__img
+              =image_tag "pc.jpg", alt: "プログラミングのイメージ", class: "img-fluid"
+            .app__description
+              %p Ruby on Rails, JavaScript, PHPなどを持ちいたWEBアプリケーションが製作できます。
+        %section.design.col-sm-4.col
+          =link_to works_path do
+            %figure.design__img
+              =image_tag "dtp.jpg", alt: "デザインのイメージ", class: "img-fluid"
+            .design__description
+              %p Photoshop, Illustrator, Wordpressなどを用いたデザイン系製作物の製作実績をご紹介いたします。
+        %section.other.col-sm-4.col
+          =link_to works_path do
+            %figure.other__img
+              =image_tag "other.jpg", alt: "その他の作業のイメージ", class: "img-fluid"
+            .other__description
+              %p 動画コンテンツ・IT講習テキスト・講演実績などその他の実績をご紹介いたします。
 
-%main.col.mt-5
-  %article.info
-    %h2.info__header.mb-3.text-center What I Can Do
-    .info__content.d-sm-flex
-      %section.app.col-sm-4.col
-        =link_to works_path do
-          %figure.app__img
-            =image_tag "pc.jpg", alt: "プログラミングのイメージ", class: "img-fluid"
-          .app__description
-            %p Ruby on Rails, JavaScript, PHPなどを持ちいたWEBアプリケーションが製作できます。
-      %section.design.col-sm-4.col
-        =link_to works_path do
-          %figure.design__img
-            =image_tag "dtp.jpg", alt: "デザインのイメージ", class: "img-fluid"
-          .design__description
-            %p Photoshop, Illustrator, Wordpressなどを用いたデザイン系製作物の製作実績をご紹介いたします。
-      %section.other.col-sm-4.col
-        =link_to works_path do
-          %figure.other__img
-            =image_tag "other.jpg", alt: "その他の作業のイメージ", class: "img-fluid"
-          .other__description
-            %p 動画コンテンツ・IT講習テキスト・講演実績などその他の実績をご紹介いたします。
+    %article.works.col
+      %h2.works__header.mb-3.text-center Works
+      .works__content
+        .slider.d-flex
+          - @works.each do |work|
+            =link_to work_path(work.id) do
+              %figure.slide
+                =image_tag work.images[0].url, alt:"slider", class: "slide__img", width: 280
+                
+        .slideshow-nav
+          %a.prev{:href => "#"}
+          %a.next{:href => "#"}
+        .slideshow-indicator
 
-  %article.works.col
-    %h2.works__header.mb-3.text-center Works
-    .works__content
-      .slider.d-flex
-        - @works.each do |work|
-          =link_to work_path(work.id) do
-            %figure.slide
-              =image_tag work.images[0].url, alt:"slider", class: "slide__img", width: 280
-              
-      .slideshow-nav
-        %a.prev{:href => "#"}
-        %a.next{:href => "#"}
-      .slideshow-indicator
+      .bottom-info.text-right
+        =link_to 'See More', works_path
 
-    .bottom-info.text-right
-      =link_to 'See More', works_path
+    %article.blog.col#blog
+      %h2.blog__header.mb-3.text-center Blog and Info.
+      .blog__content.d-flex
+        .media.col.d-block.d-md-flex.mr-1.pt-3
+          =link_to "https://qiita.com/tanutanu/", target: "_new" do
+            %figure.media__img.mr-2.text-center
+              =image_tag "qiita.svg", width: 100, height:100, alt: "qiitaのロゴ"
+          %p.media__description Qiitaには、主に学習を進める中で気づいたことを書いています
+        .media.col.d-block.d-md-flex.pt-3
+          =link_to "https://twitter.com/azmengineer", target: "_new" do
+            %figure.media__img.mr-2.text-center
+              =image_tag "Twitter_Logo_WhiteOnImage.svg", width: 100, height:100, alt: "dummy"
+          %p.media__descriprion Twitterでは主に日々の暮らしのことをつぶやいています
 
-  %article.blog.col#blog
-    %h2.blog__header.mb-3.text-center Blog and Info.
-    .blog__content.d-flex
-      .media.col.d-block.d-md-flex.mr-1.pt-3
-        =link_to "https://qiita.com/tanutanu/", target: "_new" do
-          %figure.media__img.mr-2.text-center
-            =image_tag "qiita.svg", width: 100, height:100, alt: "qiitaのロゴ"
-        %p.media__description Qiitaには、主に学習を進める中で気づいたことを書いています
-      .media.col.d-block.d-md-flex.pt-3
-        =link_to "https://twitter.com/azmengineer", target: "_new" do
-          %figure.media__img.mr-2.text-center
-            =image_tag "Twitter_Logo_WhiteOnImage.svg", width: 100, height:100, alt: "dummy"
-        %p.media__descriprion Twitterでは主に日々の暮らしのことをつぶやいています
-
-  %article.contact.col.mt-3
-    %h2.contact__header.mb-3.text-center Contact Me
-    .d-flex.justify-content-center
-      .contact__form.col-md-9
-        -# %p.col ※現状ではフォームはベータ版となっております。恐れ入りますがTwitterのDMにてご連絡いただけますと幸いです。
-        = form_with model: @inquiry, local: true do |f|
-          %p.form_group.d-md-flex
-            = f.label :name, "Your Name*", class: "col-md-2"
-            = f.text_field :name, class: "form-control inquiry-form"
-          
-          %p.form_group.d-md-flex
-            = f.label :email, "Your E-mail*", class: "col-md-2"
-            = f.text_field :email, class: "form-control inquiry-form"
-          
-          %p.form_group.d-md-flex
-            = f.label :message, "Message*", class: "col-md-2"
-            = f.text_area :message, class: "form-control inquiry-form-text-area"
-          .d-flex.justify-content-center
-            =f.submit "Send Message",class: "btn btn-default"
+    %article.contact.col.mt-3
+      %h2.contact__header.mb-3.text-center Contact Me
+      .d-flex.justify-content-center
+        .contact__form.col-md-9
+          -# %p.col ※現状ではフォームはベータ版となっております。恐れ入りますがTwitterのDMにてご連絡いただけますと幸いです。
+          = form_with model: @inquiry, local: true do |f|
+            %p.form_group.d-md-flex
+              = f.label :name, "Your Name*", class: "col-md-2"
+              = f.text_field :name, class: "form-control inquiry-form"
+            
+            %p.form_group.d-md-flex
+              = f.label :email, "Your E-mail*", class: "col-md-2"
+              = f.text_field :email, class: "form-control inquiry-form"
+            
+            %p.form_group.d-md-flex
+              = f.label :message, "Message*", class: "col-md-2"
+              = f.text_area :message, class: "form-control inquiry-form-text-area"
+            .d-flex.justify-content-center
+              =f.submit "Send Message",class: "btn btn-default"
