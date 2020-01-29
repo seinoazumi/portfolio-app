@@ -1,40 +1,41 @@
-%main.work.row
-  %figure.work__l.col-sm-6.overflow-scroll
-    = image_tag @work.images[1].url, class: 'work__img w-100 img-fluid'
-  
-  .work__info.col-sm-6
-    %h3.work__info__title= @work.name 
-    %p.work__info__category
-      カテゴリー：
-      - @work.categories.each do |c|
-        = c.name + ','
+.container.my-5
+  %main.work.row
+    %figure.work__l.col-sm-6.overflow-scroll
+      = image_tag @work.images[1].url, class: 'work__img w-100 img-fluid'
+    
+    .work__info.col-sm-6
+      %h3.work__info__title= @work.name 
+      %p.work__info__category
+        カテゴリー：
+        - @work.categories.each do |c|
+          = c.name + ','
 
-    -# TODO: カテゴリに”プログラミング”かWEBデザインが含まれている時のみ”使用言語”を表示する
-    -# - if @work.categories.include?("プログラミング") || @work.categories.include?("WEBデザイン")
-    %p.work__info__longuage
-      使用言語：
-      %span= @work.language
+      -# TODO: カテゴリに”プログラミング”かWEBデザインが含まれている時のみ”使用言語”を表示する
+      -# - if @work.categories.include?("プログラミング") || @work.categories.include?("WEBデザイン")
+      %p.work__info__longuage
+        使用言語：
+        %span= @work.language
 
-    %p.work__info__softwear
-      使用ソフト等：
-      %span= @work.softwear
+      %p.work__info__softwear
+        使用ソフト等：
+        %span= @work.softwear
 
-    %p.work__info__time
-      制作時間：
-      %span= @work.time
-      時間
-    %p.work__info__description= simple_format(@work.description)
+      %p.work__info__time
+        制作時間：
+        %span= @work.time
+        時間
+      %p.work__info__description= simple_format(@work.description)
 
-    %p.work__info__url
-      作品／関連URL：
-      %span= @work.url
+      %p.work__info__url
+        作品／関連URL：
+        %span= @work.url
 
-    %p.work__info__date
-      制作時期：
-      %span= @work.date.strftime("%Y. %m")
+      %p.work__info__date
+        制作時期：
+        %span= @work.date.strftime("%Y. %m")
 
-  .pagenation.col.mt-3.text-center
-    = link_to "作品一覧へ", works_path
+    .pagenation.col.mt-3.text-center
+      = link_to "作品一覧へ", works_path
 
-  - if current_user && current_user.admin?
-    = link_to "この作品を編集する", edit_admin_work_path
+    - if current_user && current_user.admin?
+      = link_to "この作品を編集する", edit_admin_work_path

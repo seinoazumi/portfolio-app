@@ -1,7 +1,8 @@
-.row
-  .col-10
-    %h2 カテゴリー一覧
-    - if @categories.any?
-      - @categories.each do |c|
-        = c.name
-        %br
+.container.my-5
+  .row
+    .col-10
+      %h2 カテゴリー一覧
+      - if @categories.any?
+        - @categories.each do |c|
+          = c.name
+          %br
