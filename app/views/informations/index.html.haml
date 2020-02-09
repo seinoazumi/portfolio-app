@@ -71,7 +71,8 @@
       %h2.contact__header.mb-3.text-center Contact Me
       .d-flex.justify-content-center
         .contact__form.col-md-9
-          -# %p.col ※現状ではフォームはベータ版となっております。恐れ入りますがTwitterのDMにてご連絡いただけますと幸いです。
+          -if flash[:success] || if flash[:danger]
+            =render 'layout/flash'
           = form_with model: @inquiry, local: true do |f|
             %p.form_group.d-md-flex
               = f.label :name, "Your Name*", class: "col-md-2"
