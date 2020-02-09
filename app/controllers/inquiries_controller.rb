@@ -7,7 +7,7 @@ class InquiriesController < ApplicationController
       InquiryMailer.send_mail(@inquiry).deliver_now
     else
       flash[:danger] = "メッセージの送信に失敗しました"
-      render root_path
+      redirect_to root_path
     end
   end
 
