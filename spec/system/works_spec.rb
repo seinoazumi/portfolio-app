@@ -11,7 +11,7 @@ describe 'Works 作品一覧', type: :system do
       fill_in 'Password', with: login_user.password
       click_on 'Log in'
       visit root_path
-    #   work = FactoryBot.create(:work)
+      work = FactoryBot.create(:work)
     end
 
     context '管理者以外でログインしている時' do

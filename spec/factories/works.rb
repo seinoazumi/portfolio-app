@@ -16,20 +16,31 @@
 #  updated_at  :datetime         not null
 #
 
-# FactoryBot.define do
-#   image1 = Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/image1.jpg'))
-#   image2 = Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/image2.jpg'))
-#   # ToDo: imageが２個入ったハッシュがかけない
-#   factory :work do
-#     name { '作品１' }
-#     category { 1 }
-#     images { { images: [ image1 , image2 ].to_s } }
-#     description { '作品の説明' }
-#     time { 20 }
-#     softwear { "Rails" }
-#     date { "2020-01-01" }
-#     language { "Ruby" }
-#     url { "https://www.example.com" }
-#     recomend { 1 }
-#   end
-# end
+FactoryBot.define do
+
+  factory :work do
+    name { '作品１' }
+    images { { images: [ image1 , image2 ] } }
+    description { '作品の説明' }
+    time { 20 }
+    softwear { "Rails" }
+    date { "2020-01-01" }
+    language { "Ruby" }
+    url { "https://www.example.com" }
+    recomend { 1 }
+
+    category # ファクトリ呼び出し
+  end
+
+  factory :image do
+    # logo { Rack::Test::UploadedFile.new(Rails.root.join('spec/support/logo_image.jpg'), 'image/jpeg') }
+    # ToDo: imageが２個入ったハッシュがかけない
+    image1 { Rack::Test::UploadedFile.new(Rails.root.join('spec/fixtures/image1.jpg'), 'image/jpeg') }
+    image2 { Rack::Test::UploadedFile.new(Rails.root.join('spec/fixtures/image1.jpg'), 'image/jpeg') }
+  end
+
+
+  factory :category do
+    name { 'カテゴリー１' }
+  end
+end
