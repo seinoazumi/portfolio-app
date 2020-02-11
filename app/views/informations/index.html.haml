@@ -71,7 +71,7 @@
       %h2.contact__header.mb-3.text-center Contact Me
       .d-flex.justify-content-center
         .contact__form.col-md-9
-          -if flash[:success] || if flash[:danger]
+          -if flash[:success]
             =render 'layout/flash'
           = form_with model: @inquiry, local: true do |f|
             %p.form_group.d-md-flex
