@@ -1,8 +1,19 @@
 .container-fluid.no-gutter
   .row.d-flex.justify-content-end.col-11
     %p.select-guide カテゴリーを選択：
-    = form_tag works_path, method: :get, class: "search__form" do
-      = select_tag :category_id, options_from_collection_for_select( Category.all, :id, :name, params[:category_id]), { prompt: "All", class: "minimal", onchange: "submit(this.form);"}
+    = form_with url: works_path, local: true, method: :get do
+      = check_box_tag "category_all", value = "", checked = false, options = {id: "category_all" }
+      = label_tag "category_all", "All"
+
+      - @categories.each do |cat|
+        = check_box_tag "category[id][]", value = cat.id, checked = false, options = {id: "category_#{cat.id}", multiple: true}
+        = label_tag :category, cat.name
+    
+      = submit_tag("絞り込み")
+      
+
+    -# = form_tag works_path, method: :get, class: "search__form" do
+    -#   = select_tag :category_id, options_from_collection_for_select( Category.all, :id, :name, params[:category_id]), { prompt: "All", class: "minimal", onchange: "submit(this.form);"}
   %hr
   .row.d-flex.my-5.justify-content-center
     %main.works#works.col.col-md-10

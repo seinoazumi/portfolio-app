@@ -1,7 +1,10 @@
 class WorksController < ApplicationController
 
   def index
-    @works = params[:category_id].present? ? Category.find(params[:category_id]).works : Work.all
+    @categories = Category.all
+    
+    @works = params.include?("commit") ?  Work.find(params[:category][:id]) : Work.all
+    # @works = params[:category_id].present? ? Category.find(params[:category_id]).works : Work.all
   end
 
   def show
@@ -12,4 +15,9 @@ class WorksController < ApplicationController
     end
   end
 
+  private
+
+  def search_params
+    params.require(:work).permit(id:[])
+  end
 end
