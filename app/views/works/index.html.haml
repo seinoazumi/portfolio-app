@@ -1,12 +1,11 @@
 .container-fluid.no-gutter
   .row.d-flex.justify-content-end.col-11
+    - condition = params[:category][:id].present? ? true : false 
+
     %p.select-guide カテゴリーを選択：
     = form_with url: works_path, local: true, method: :get do
-      = check_box_tag "all_category", value = 0, checked = true, options = {id: "category_all" }
-      = label_tag "category_all", "All"
-
       - @categories.each do |cat|
-        = check_box_tag "category[id][]", value = cat.id, checked = false, options = {id: "category#{cat.id}", multiple: true}
+        = check_box_tag "category[id][]", value = cat.id, checked = condition, options = {id: "category#{cat.id}", multiple: true}
         = label_tag "category#{cat.id}", cat.name
     
       = submit_tag("絞り込み")
